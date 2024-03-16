@@ -8,9 +8,9 @@ plugin:
   # Using a global placeholder is just like any other placeholder! Simply surround the placeholder name with "%" (ex: "%prefix%")
   # WARNING: Global placeholders can conflict with local placeholders! Please be wary when creating your own global placeholder(s)!
   global-placeholders: # It's recommended to keep all the default global placeholders (prefix, p, s, pe, se)
-    prefix: "&3&lANNOYING &8&l| &b" # Prefix for the plugin, typically used in the beginning of most messages
-    p: "&b" # Base color for non-error messages
-    s: "&3" # Highlight color for non-error messages
+    prefix: "&5&lPMAP-SV &8&l| &d" # Prefix for the plugin, typically used in the beginning of most messages
+    p: "&d" # Base color for non-error messages
+    s: "&5" # Highlight color for non-error messages
     pe: "&c" # Base color for error messages
     se: "&4" # Highlight color for error messages
 
