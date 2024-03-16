@@ -10,6 +10,7 @@ jobs:
     uses: srnyx/tools/.github/workflows/publish.yml@main
     with:
       java: 17
+      versions: >=1.19.4
 #      modrinth: modrinthId
 #      curseforge: curseforgeId
     secrets: inherit
