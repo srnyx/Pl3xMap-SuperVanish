@@ -8,7 +8,8 @@ on:
 jobs:
   build:
     uses: srnyx/tools/.github/workflows/publish.yml@main
-#    with:
+    with:
+      java: 17
 #      modrinth: modrinthId
 #      curseforge: curseforgeId
     secrets: inherit
