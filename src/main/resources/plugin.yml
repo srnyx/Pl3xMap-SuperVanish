@@ -10,4 +10,7 @@ api-version: 1.13
 
 depend:
   - Pl3xMap
+
+softdepend:
   - SuperVanish
+  - PremiumVanish

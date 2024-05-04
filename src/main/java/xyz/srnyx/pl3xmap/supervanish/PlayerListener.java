@@ -2,6 +2,7 @@ package xyz.srnyx.pl3xmap.supervanish;
 
 import de.myzelyam.api.vanish.PlayerHideEvent;
 import de.myzelyam.api.vanish.PlayerShowEvent;
+import de.myzelyam.api.vanish.VanishAPI;
 
 import net.pl3x.map.core.player.Player;
 
@@ -11,8 +12,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.jetbrains.annotations.NotNull;
 
 import xyz.srnyx.annoyingapi.AnnoyingListener;
-
-import java.util.UUID;
 
 
 public class PlayerListener extends AnnoyingListener {
@@ -30,22 +29,22 @@ public class PlayerListener extends AnnoyingListener {
     @EventHandler
     public void onPlayerHide(@NotNull PlayerHideEvent event) {
         if (plugin.mapPlayerRegistry == null) return; // This should never happen, but just in case
-        final Player player = plugin.mapPlayerRegistry.get(event.getPlayer().getUniqueId());
-        if (player != null) player.setHidden(true, false);
+        final Player mapPlayer = plugin.mapPlayerRegistry.get(event.getPlayer().getUniqueId());
+        if (mapPlayer != null) mapPlayer.setHidden(true, false);
     }
 
     @EventHandler
     public void onPlayerShow(@NotNull PlayerShowEvent event) {
         if (plugin.mapPlayerRegistry == null) return; // This should never happen, but just in case
-        final Player player = plugin.mapPlayerRegistry.get(event.getPlayer().getUniqueId());
-        if (player != null) player.setHidden(false, false);
+        final Player mapPlayer = plugin.mapPlayerRegistry.get(event.getPlayer().getUniqueId());
+        if (mapPlayer != null) mapPlayer.setHidden(false, false);
     }
 
     @EventHandler
     public void onPlayerJoin(@NotNull PlayerJoinEvent event) {
-        if (plugin.vanishStateManager == null || plugin.mapPlayerRegistry == null) return; // This should never happen, but just in case
-        final UUID uuid = event.getPlayer().getUniqueId();
-        final Player player = plugin.mapPlayerRegistry.get(uuid);
-        if (player != null) player.setHidden(plugin.vanishStateManager.isVanished(uuid), false);
+        if (plugin.mapPlayerRegistry == null) return; // This should never happen, but just in case
+        final org.bukkit.entity.Player player = event.getPlayer();
+        final Player mapPlayer = plugin.mapPlayerRegistry.get(player.getUniqueId());
+        if (mapPlayer != null) mapPlayer.setHidden(VanishAPI.isInvisible(player), false);
     }
 }
