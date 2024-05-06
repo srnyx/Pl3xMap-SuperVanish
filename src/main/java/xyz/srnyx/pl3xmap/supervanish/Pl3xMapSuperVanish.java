@@ -28,7 +28,7 @@ public class Pl3xMapSuperVanish extends AnnoyingPlugin {
     @Override
     public void reload() {
         final PluginManager manager = Bukkit.getPluginManager();
-        if (!manager.isPluginEnabled("SuperVanish") || !manager.isPluginEnabled("PremiumVanish")) {
+        if (!manager.isPluginEnabled("SuperVanish") && !manager.isPluginEnabled("PremiumVanish")) {
             LOGGER.severe("SuperVanish/PremiumVanish not found!");
             listener.unregister();
             return;
