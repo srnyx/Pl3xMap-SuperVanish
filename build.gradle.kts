@@ -10,7 +10,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
-setupAnnoyingAPI("900f90e66d", "xyz.srnyx", "1.0.0", "Hide players vanished with SuperVanish on Pl3xMap")
+setupAnnoyingAPI("4460f574c3", "xyz.srnyx", "1.1.0", "Hide players vanished with SuperVanish on Pl3xMap")
 spigotAPI("1.19.4")
 
 repository("https://api.modrinth.com/maven", "https://libraries.minecraft.net") // Pl3xMap & SuperVanish
