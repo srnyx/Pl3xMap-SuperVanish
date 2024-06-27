@@ -4,7 +4,7 @@ authors:
   - srnyx
 website: https://srnyx.com
 
-main: ${group}.pl3xmap.supervanish.Pl3xMapSuperVanish
+main: ${mainPackage}.Pl3xMapSuperVanish
 version: ${version}
 api-version: 1.19
 

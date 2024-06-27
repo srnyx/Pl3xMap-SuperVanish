@@ -11,8 +11,8 @@ jobs:
     with:
       java: 17
       versions: ">=1.19.4"
-#      modrinth: modrinthId
-#      curseforge: curseforgeId
+      modrinth: 46A5q0pA
+      curseforge: 1051275
     secrets: inherit
     permissions:
       contents: write

@@ -1,4 +1,4 @@
-package xyz.srnyx.pl3xmap.supervanish;
+package xyz.srnyx.pl3xmapsupervanish;
 
 import de.myzelyam.api.vanish.PlayerHideEvent;
 import de.myzelyam.api.vanish.PlayerShowEvent;

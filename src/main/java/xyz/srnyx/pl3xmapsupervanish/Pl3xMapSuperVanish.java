@@ -1,4 +1,4 @@
-package xyz.srnyx.pl3xmap.supervanish;
+package xyz.srnyx.pl3xmapsupervanish;
 
 import net.pl3x.map.core.Pl3xMap;
 import net.pl3x.map.core.player.PlayerRegistry;
@@ -10,6 +10,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import xyz.srnyx.annoyingapi.AnnoyingPlugin;
+import xyz.srnyx.annoyingapi.PluginPlatform;
 
 
 public class Pl3xMapSuperVanish extends AnnoyingPlugin {
@@ -17,7 +18,12 @@ public class Pl3xMapSuperVanish extends AnnoyingPlugin {
     @Nullable public PlayerRegistry mapPlayerRegistry;
 
     public Pl3xMapSuperVanish() {
-        options.bStatsOptions(bStatsOptions -> bStatsOptions.id(21336));
+        options
+                .pluginOptions(pluginOptions -> pluginOptions.updatePlatforms(
+                        PluginPlatform.modrinth("46A5q0pA"),
+                        PluginPlatform.hangar(this),
+                        PluginPlatform.spigot("117638")))
+                .bStatsOptions.id(21336);
     }
 
     @Override
