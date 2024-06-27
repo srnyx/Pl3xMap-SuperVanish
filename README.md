@@ -8,7 +8,7 @@ Hide players from Pl3xMap whenever they vanish using SuperVanish, then show them
 
 ## Download
 
-**✅ Stable:** You can download the latest **stable** version at  [GitHub](https://github.com/srnyx/pl3xmap-supervanish/releases) (more may come soon)
+**✅ Stable:** You can download the latest **stable** version at [Modrinth](https://modrinth.com/plugin/pl3xmap-supervanish), [Hangar](https://hangar.papermc.io/srnyx/Pl3xMap-SuperVanish), [Spigot](https://spigotmc.org/resources/117638), [Bukkit](https://dev.bukkit.org/projects/pl3xmap-supervanish), or [GitHub](https://github.com/srnyx/pl3xmap-supervanish/releases) (more may come soon)
 
 **🚧 Snapshot:** You can download the latest **snapshot** version at [github.com/srnyx/pl3xmap-supervanish/actions/workflows/build.yml](https://github.com/srnyx/pl3xmap-supervanish/actions/workflows/build.yml)
 
