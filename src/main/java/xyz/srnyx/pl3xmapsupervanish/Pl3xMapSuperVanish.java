@@ -2,15 +2,14 @@ package xyz.srnyx.pl3xmapsupervanish;
 
 import net.pl3x.map.core.Pl3xMap;
 import net.pl3x.map.core.player.PlayerRegistry;
-
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
-
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
 import xyz.srnyx.annoyingapi.AnnoyingPlugin;
-import xyz.srnyx.annoyingapi.PluginPlatform;
+import xyz.srnyx.pl3xmapsupervanish.messages.PMSVMessagesProvider;
+
+import java.util.logging.Level;
 
 
 public class Pl3xMapSuperVanish extends AnnoyingPlugin {
@@ -18,12 +17,14 @@ public class Pl3xMapSuperVanish extends AnnoyingPlugin {
     @Nullable public PlayerRegistry mapPlayerRegistry;
 
     public Pl3xMapSuperVanish() {
-        options
-                .pluginOptions(pluginOptions -> pluginOptions.updatePlatforms(
-                        PluginPlatform.modrinth("46A5q0pA"),
-                        PluginPlatform.hangar(this),
-                        PluginPlatform.spigot("117638")))
-                .bStatsOptions.id(21336);
+        options.statsOptions(statsOptions -> statsOptions
+                .bStats(bStatsOptions -> bStatsOptions.id(21336))
+                .fastStats(fastStatsOptions -> fastStatsOptions.id("c508b6f390bba6c4b29536f40ccbda03")));
+    }
+
+    @Override @NotNull
+    public PMSVMessagesProvider getMessages() {
+        return (PMSVMessagesProvider) super.getMessages();
     }
 
     @Override
@@ -35,7 +36,7 @@ public class Pl3xMapSuperVanish extends AnnoyingPlugin {
     public void reload() {
         final PluginManager manager = Bukkit.getPluginManager();
         if (!manager.isPluginEnabled("SuperVanish") && !manager.isPluginEnabled("PremiumVanish")) {
-            LOGGER.severe("SuperVanish/PremiumVanish not found!");
+            log(Level.SEVERE, "SuperVanish/PremiumVanish not found!");
             listener.unregister();
             return;
         }

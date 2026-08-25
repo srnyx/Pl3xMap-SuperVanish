@@ -3,17 +3,15 @@ package xyz.srnyx.pl3xmapsupervanish;
 import de.myzelyam.api.vanish.PlayerHideEvent;
 import de.myzelyam.api.vanish.PlayerShowEvent;
 import de.myzelyam.api.vanish.VanishAPI;
-
 import net.pl3x.map.core.player.Player;
-
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerJoinEvent;
-
 import org.jetbrains.annotations.NotNull;
-
 import xyz.srnyx.annoyingapi.AnnoyingListener;
+import xyz.srnyx.annoyingapi.parents.Registrable;
 
 
+@Registrable.Ignore
 public class PlayerListener extends AnnoyingListener {
     @NotNull private final Pl3xMapSuperVanish plugin;
 

@@ -11,11 +11,12 @@ on:
       - 'settings.gradle.kts'
       - 'gradlew'
       - 'gradlew.bat'
+  release:
+    types:
+      - published
   workflow_dispatch:
 
 jobs:
   build:
-    uses: srnyx/tools/.github/workflows/build.yml@main
-    with:
-      name: Pl3xMap-SuperVanish
-      java: 17
+    uses: srnyx/tools/.github/workflows/publish.yml@main
+    secrets: inherit
